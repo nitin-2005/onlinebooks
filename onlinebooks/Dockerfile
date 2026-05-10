@@ -13,8 +13,12 @@ RUN mvn clean package -DskipTests
 FROM tomcat:10.1.23-jdk11-temurin
 # Remove default webapps
 RUN rm -rf /usr/local/tomcat/webapps/*
-# Copy built war file to ROOT.war so it serves at /
-COPY --from=build /app/target/onlinebooks.war /usr/local/tomcat/webapps/ROOT.war
+# Copy built war file and extract it to ROOT directory
+COPY --from=build /app/target/onlinebooks.war /tmp/ROOT.war
+RUN mkdir -p /usr/local/tomcat/webapps/ROOT && \
+    cd /usr/local/tomcat/webapps/ROOT && \
+    jar xf /tmp/ROOT.war && \
+    rm /tmp/ROOT.war
 
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
