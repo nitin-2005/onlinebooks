@@ -57,7 +57,7 @@
                         <h3 class="text-2xl font-bold text-stone-800 font-playfair"><i class="fas fa-users text-indigo-600 mr-2"></i> Manage Users & Sellers</h3>
                         <div class="flex items-center space-x-4">
                             <a href="#" class="text-indigo-600 font-bold hover:underline flex items-center text-sm"><i class="fas fa-arrow-right mr-1"></i>View All</a>
-                            <button onclick="window.location.href='register.jsp'" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-bold shadow transition"><i class="fas fa-plus mr-1"></i> Add User</button>
+                            <button onclick="window.location.href='register-page'" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-bold shadow transition"><i class="fas fa-plus mr-1"></i> Add User</button>
                         </div>
                     </div>
                     <div class="overflow-x-auto">
@@ -103,7 +103,7 @@
                         <h3 class="text-2xl font-bold text-stone-800 font-playfair"><i class="fas fa-book text-amber-700 mr-2"></i> Manage Global Inventory</h3>
                         <div class="flex items-center space-x-4">
                             <a href="viewbook" class="text-amber-700 font-bold hover:underline flex items-center text-sm"><i class="fas fa-arrow-right mr-1"></i>View All</a>
-                            <button onclick="window.location.href='addbook.jsp'" class="bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-lg text-sm font-bold shadow transition"><i class="fas fa-plus mr-1"></i> Add Item Globally</button>
+                            <button onclick="window.location.href='admin/add-book'" class="bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-lg text-sm font-bold shadow transition"><i class="fas fa-plus mr-1"></i> Add Item Globally</button>
                         </div>
                     </div>
                     <div class="overflow-x-auto">

@@ -198,6 +198,26 @@
 		<url-pattern>/admin/saveBook</url-pattern>
 	</servlet-mapping>
 
+	<!-- Clean URL mappings for JSPs -->
+	<servlet>
+		<servlet-name>AddBookPage</servlet-name>
+		<jsp-file>/addbook.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddBookPage</servlet-name>
+		<url-pattern>/admin/add-book</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RegisterPage</servlet-name>
+		<jsp-file>/register.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterPage</servlet-name>
+		<url-pattern>/register-page</url-pattern>
+	</servlet-mapping>
+
+
 	<!-- Error Handlers -->
 	<servlet>
 		<servlet-name>ErrorHandlerServlet</servlet-name>
