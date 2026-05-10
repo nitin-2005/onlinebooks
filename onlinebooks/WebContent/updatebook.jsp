@@ -1,16 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<jsp:include page="WEB-INF/views/header.jsp" />
 <% 
   if(session.getAttribute("ADMIN") == null && session.getAttribute("SELLER") == null) { 
-      response.sendRedirect("login.jsp"); 
+      response.sendRedirect(request.getContextPath() + "/login.jsp"); 
       return; 
   }
   if(request.getAttribute("book") == null) {
       // Fallback if accessed directly without servlet
-      response.sendRedirect("admin-dashboard");
+      response.sendRedirect(request.getContextPath() + "/admin-dashboard");
       return;
   }
 %>
+<jsp:include page="WEB-INF/views/header.jsp" />
 <div class="min-h-screen flex items-center justify-center bg-stone-100 py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
     <div class="absolute inset-0 z-0">
         <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Books Background" class="w-full h-full object-cover opacity-20">

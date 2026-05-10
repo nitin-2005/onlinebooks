@@ -13,13 +13,14 @@
 <%@ page import="com.bittercode.service.BookService" %>
 <%@ page import="com.bittercode.service.impl.BookServiceImpl" %>
 <%@ page import="com.bittercode.util.StoreUtil" %>
-<jsp:include page="WEB-INF/views/header.jsp" />
 <% 
   String customerEmail = (String) session.getAttribute("USERNAME");
   if(session.getAttribute("CUSTOMER") == null) { 
-      response.sendRedirect("login.jsp"); 
+      response.sendRedirect(request.getContextPath() + "/login.jsp"); 
       return; 
   }
+%>
+<jsp:include page="WEB-INF/views/header.jsp" />
   
   // Track active tab for postbacks
   String activeTab = request.getParameter("activeTab");

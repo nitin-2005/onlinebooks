@@ -6,13 +6,14 @@
 <%@ page import="com.bittercode.service.impl.UserServiceImpl" %>
 <%@ page import="com.bittercode.service.BookService" %>
 <%@ page import="com.bittercode.service.impl.BookServiceImpl" %>
-<jsp:include page="WEB-INF/views/header.jsp" />
 <% 
   String sellerEmail = (String) session.getAttribute("USERNAME");
   if(session.getAttribute("SELLER") == null) { 
-      response.sendRedirect("login.jsp"); 
+      response.sendRedirect(request.getContextPath() + "/login.jsp"); 
       return; 
   }
+%>
+<jsp:include page="WEB-INF/views/header.jsp" />
   
   String activeTab = request.getParameter("activeTab");
   if(activeTab == null || activeTab.isEmpty()) {

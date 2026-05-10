@@ -1,11 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
-<jsp:include page="WEB-INF/views/header.jsp" />
 <% 
   if(session.getAttribute("ADMIN") == null) { 
-      response.sendRedirect("login.jsp"); 
+      response.sendRedirect(request.getContextPath() + "/login.jsp"); 
       return; 
   }
+%>
+<jsp:include page="WEB-INF/views/header.jsp" />
   if(request.getAttribute("users") == null) {
       response.sendRedirect("admin-dashboard");
       return;
