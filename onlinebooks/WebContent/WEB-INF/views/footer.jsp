@@ -28,7 +28,27 @@
             </div>
         </div>
         <div class="mt-12 pt-8 border-t border-stone-800 text-center">
-            <p class="text-sm text-stone-500">&copy; 2026 OnlineBooks Library. Designed with passion for readers.</p>
+            <style>
+                @keyframes shine {
+                    0% { background-position: 0% 50%; }
+                    50% { background-position: 100% 50%; }
+                    100% { background-position: 0% 50%; }
+                }
+                .text-shiny {
+                    background: linear-gradient(90deg, #f59e0b, #fde68a, #f59e0b);
+                    background-size: 200% auto;
+                    color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    animation: shine 3s linear infinite;
+                    font-weight: bold;
+                    letter-spacing: 0.05em;
+                }
+            </style>
+            <p class="text-sm text-stone-500 mb-2">&copy; 2026 OnlineBooks Library. Designed with passion for readers.</p>
+            <p class="text-lg mt-2">
+                <span class="text-shiny">All Rights Reserved By Er Nitin Tiwari</span>
+            </p>
         </div>
     </div>
 </footer>
